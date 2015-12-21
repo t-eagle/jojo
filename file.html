@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>玖玖国际</title>
+    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('.left-menu a p').bind('click', function(){
+                $('.left-menu a p').removeClass('active01');
+                $(this).addClass('active01');
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle navbar-bg" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="70px"/></a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">基本情况</a></li>
+                <li><a href="#">档案维护</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">档案查询</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="situation-con">
+    <div class="container">
+        <ol class="breadcrumb btn-lg small-nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">健康档案</a></li>
+            <li class="active">健康情况</li>
+        </ol>
+        <!--<p class="sit-nav">首页 / 基本情况 / 基本信息</p>-->
+        <div class="sit-letf">
+            <div class="left-menu">
+                <a href="#"><p class="active">基本情况</p></a>
+                <a href="#"><p>急救信息</p></a>
+                <a href="#"><p style="border-bottom: none">基本信息</p></a>
+            </div>
+            
+            <div class="left-consult">
+                <img src="img/consult.png" alt=""/>
+                <a class="consult-btn" href="#">马上咨询</a>
+            </div>
+            <button class="btn btn-default" type="submit">马上咨询</button>
+        </div>
+
+
+
+
+        <div class="container sit-right">
+           <div class="row sit-form">
+               <form>
+                   <div class="basic01">
+                       <div class="form-group">
+                           <label for="name" class="col-sm-4 control-label">姓名：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="name" placeholder="张三"></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="name" class="col-sm-4 control-label">性别：</label>
+                           <label>
+                               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                               男
+                           </label>
+                           <label>
+                               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                               女
+                           </label>
+
+                        </div>
+
+                       <div class="form-group">
+                           <label for="birthday" class="col-sm-4 control-label">出生日期：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="birthday" placeholder="1990-01-01"></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="identity" class="col-sm-4 control-label">身份证号：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="identity" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="protection" class="col-sm-4 control-label">护照：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="protection" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="nation" class="col-sm-4 control-label">民族：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="nation" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="status" class="col-sm-4 control-label">政治面貌：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="status" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="company" class="col-sm-4 control-label">工作单位：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="company" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="job" class="col-sm-4 control-label">职业：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="job" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="job-wu" class="col-sm-4 control-label">职务：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="job-wu" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="faith" class="col-sm-4 control-label">宗教信仰：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="faith" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="email" class="col-sm-4 control-label">邮箱：</label>
+                           <div class="col-sm-8"><input type="email" class="form-control" id="email" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="birthplace" class="col-sm-4 control-label">出生地：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="birthplace" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="phone" class="col-sm-4 control-label">本人电话：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="phone" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="address" class="col-sm-4 control-label">现住址：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="address" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="postcode" class="col-sm-4 control-label">邮编：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="postcode" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="contact-name" class="col-sm-4 control-label">联系人姓名：</label>
+                           <div class="col-sm-8"><input type="text" class="form-control" id="contact-name" placeholder=""></div>
+                       </div>
+                       <div class="form-group">
+                           <label for="stature" class="col-sm-4 control-label">身高：</label>
+                           <div class="col-sm-8">
+                               <div class="input-group">
+                                   <input type="text" class="form-control" id="stature" placeholder="">
+                               <div class="input-group-addon">cm</div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="weight" class="col-sm-4 control-label">体重：</label>
+                           <div class="col-sm-8">
+                               <div class="input-group">
+                                   <input type="text" class="form-control" id="weight" placeholder="">
+                                   <div class="input-group-addon">kg</div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label for="encoding" class="col-sm-4 control-label">17位编码：</label>
+                           <div class="col-sm-8">
+                           <input type="text" class="form-control" id="encoding" placeholder=""></div>
+                       </div>
+                   </div>
+
+                <div class="basic02">
+                    <div class="form-group">
+                        <label>血型：</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-1" value="option1"> A型
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-2" value="option2"> B型
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-3" value="option3"> AB型
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-4" value="option3"> O型
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-5" value="option3"> 其他
+                        </label>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;Rh&nbsp;</span>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-6" value="option3"> 阴性
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-7" value="option3"> 阳性
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="blood-type" id="blood-type-8" value="option3"> 不详
+                        </label>
+
+                    </div>
+                   <div class="form-group">
+                       <label>文化程度：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="culture" id="culture-1" value="option1"> 高中
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="culture" id="culture-2" value="option2"> 大专
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="culture" id="culture-3" value="option3"> 本科
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="culture" id="culture-4" value="option3"> 研究生
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="culture" id="culture-5" value="option3"> 博士
+                       </label>
+
+                   </div>
+                   <div class="form-group">
+                       <label>婚姻状况：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="marriage" id="marriage-1" value="option1"> 未婚
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="marriage" id="marriage-2" value="option2"> 已婚
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="marriage" id="marriage-3" value="option3"> 离婚
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="marriage" id="marriage-4" value="option3"> 再婚
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="marriage" id="marriage-5" value="option3"> 丧偶
+                       </label>
+
+                   </div>
+
+                   <div class="form-group">
+                       <label>疾病名称：</label>
+                       <br>
+                       <div class="input-group">
+                       <div class="input-group-addon">1.</div>
+                       <input type="text" class="form-control" id="disease-1" placeholder="">
+                       </div>
+                       <label class="radio-inline">
+                           <input type="radio" name="disease-1" id="disease-t-1" value="option3"> 稳定
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="disease-1" id="disease-f-2" value="option3"> 不稳定
+                       </label>
+                       <br>
+                       <br>
+                       <div class="input-group">
+                       <div class="input-group-addon">2.</div>
+                       <input type="text" class="form-control" id="disease-2" placeholder="">
+                       </div>
+                       <label class="radio-inline">
+                           <input type="radio" name="disease-2" id="disease-t-3" value="option3"> 稳定
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="disease-2" id="disease-f-4" value="option3"> 不稳定
+                       </label>
+                       <br>
+                       <br>
+                       <div class="input-group">
+                       <div class="input-group-addon">3.</div>
+                       <input type="text" class="form-control" id="disease-3" placeholder="">
+                       </div>
+                       <label class="radio-inline">
+                           <input type="radio" name="disease-3" id="disease-t-5" value="option3"> 稳定
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="disease-3" id="disease-f-6" value="option3"> 不稳定
+                       </label>
+
+
+                   </div>
+
+                   <div class="form-group">
+                       <label>付费方式：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="payment" id="payment-1" value="option1"> 自费
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="payment" id="payment-2" value="option2"> 公费
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="payment" id="payment-3" value="option3"> 医保
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="payment" id="payment-4" value="option3"> 商保
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="payment" id="payment-5" value="option3"> 大病统筹
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="payment" id="payment-6" value="option3"> 其他
+                       </label>
+                       <div class="input-group">
+                       <div class="input-group-addon">医疗保险号</div>
+                       <input type="text" class="form-control" id="medical-security-number" placeholder="">
+                        </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>药物过敏史：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="drug-allergy" id="drug-allergy-1" value="option1"> 无
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="drug-allergy" id="drug-allergy-2" value="option2"> 有
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="drug-allergy-y" id="drug-allergy-3" value="option3"> 青霉素
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="drug-allergy-y" id="drug-allergy-4" value="option3"> 磺胺
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="drug-allergy-y" id="drug-allergy-5" value="option3"> 链霉素
+                       </label>
+
+                       <label class="radio-inline">
+                           <input type="radio" name="drug-allergy" id="drug-allergy-7" value="option3"> 不明确
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="drug-allergy" id="drug-allergy-6" value="option3">其他
+                       </label>
+
+                       <div class="input-group">
+                           <div class="input-group-addon">其他</div>
+                           <input type="text" class="form-control " id="medical-security" placeholder="">
+                       </div>
+                    </div>
+
+                   <div class="form-group">
+                       <label>既往病史：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="anamnesis" id="anamnesis-1" value="option1"> 无
+                       </label>
+
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="hypertension" value="option2"> 高血压
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="hypertension-y" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="diabetes" value="option2"> 糖尿病
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="diabetes-y" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="chd" value="option2"> 冠心病
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="chd-y" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="infarction" value="option2"> 脑梗塞
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="Infarction-y" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="ich" value="option2"> 脑出血
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="ich-y" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="tumour" value="option2"> 肿瘤
+                               </label>
+                           </div>
+                           <select class="form-control">
+                           <option>良性</option>
+                           <option>恶性</option>
+                           </select>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="anamnesis-else" id="anamnesis-else" value="option2"> 其他
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="anamnesis-else-t" placeholder="">
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>金属植入手术：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="metal-mplants" id="metal-mplants-1" value="option1"> 心脏支架植入术
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="metal-mplants" id="metal-mplants-2" value="option2"> 体内金属材料植入
+                       </label>
+                   </div>
+
+                   <div class="form-group">
+                       <label>有害物接触史：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="harmful-exposure-history" id="harmful-exposure-history-1" value="option1"> 毒物
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="harmful-exposure-history" id="harmful-exposure-history-2" value="option2"> 放射性物质
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="harmful-exposure-history" id="harmful-exposure-history-3" value="option2"> 有害粉尘
+                       </label>
+                       <div class="input-group">
+                           <div class="input-group-addon" id="transfusion-history">
+                               输血史
+                           </div>
+                           <select class="form-control">
+                               <option>有</option>
+                               <option>无</option>
+                           </select>
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>传染病接触史：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="contagion-history" id="contagion-history-1" value="option1">结核
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="contagion-history" id="contagion-history-2" value="option2"> 病毒性肝炎
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="contagion-history" id="contagion-history-3" value="option2"> 疟疾
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="contagion-history" id="contagion-history-4" value="option2"> 伤寒
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="contagion-history" id="contagion-history-5" value="option2"> 其他
+                       </label>
+                   </div>
+                   <div class="form-group" id="malaria-water-contact">
+                       <label>疟水接触史：</label>
+                       <select class="form-control">
+                           <option>有</option>
+                           <option>无</option>
+                       </select>
+                   </div>
+                   <div class="form-group" id="history-of-surgical-trauma">
+                       <label>手术外伤史：</label>
+                       <select class="form-control">
+                           <option>有</option>
+                           <option>无</option>
+                       </select>
+                   </div>
+                   <div class="form-group">
+                       <label>家族史：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="family-history" id="family-history-1" value="option1">高血压
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="family-history" id="family-history-2" value="option2"> 结核
+                       </label>
+
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="family-history" id="family-history-3" value="option2"> 肿瘤
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="family-history-t1" placeholder="疾病名称">
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="family-history" id="family-history-4" value="option2"> 遗传性疾病
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="family-history-t2" placeholder="疾病名称">
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="family-history" id="family-history-5" value="option2"> 其他
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="family-history-t3" placeholder="疾病名称">
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>饮食：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-1" value="option1">流质
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-2" value="option2"> 半流质
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-3" value="option2"> 普通饮食
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-4" value="option2"> 清淡
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-5" value="option2"> 辛辣
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-6" value="option2"> 油腻
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-7" value="option2"> 海鲜
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-8" value="option2"> 偏糖
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-9" value="option2"> 偏咸
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="diet" id="diet-10" value="option2"> 鱼生
+                       </label>
+                   </div>
+                   <div class="form-group">
+                       <label>吸烟史：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="smoking-history" id="smoking-history-1" value="option1">从不吸烟
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="smoking-history" id="smoking-history-2" value="option2"> 已戒烟
+                       </label>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="smoking-history" id="smoking-history-3" value="option2"> 吸烟
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="smoking-history-t1" placeholder="">
+                           <div class="input-group-addon">支/日</div>
+                           <div class="input-group-addon">
+                               烟龄
+                           </div>
+                           <input type="text" class="form-control " id="smoking-history-t2" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>饮酒史：</label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="drink-history" id="drink-history-1" value="option1">从不喝酒
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="drink-history" id="drink-history-2" value="option2"> 已戒酒
+                       </label>
+                       <div class="input-group">
+                           <div class="input-group-addon">
+                               <label class="radio-inline">
+                                   <input type="checkbox" name="drink-history" id="drink-history-3" value="option2"> 吸烟
+                               </label>
+                           </div>
+                           <input type="text" class="form-control " id="drink-history-t1" placeholder="">
+                           <div class="input-group-addon">ml/日</div>
+                           <div class="input-group-addon">
+                               时间
+                           </div>
+                           <input type="text" class="form-control " id="drink-history-t2" placeholder="">
+                           <div class="input-group-addon">年</div>
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>运动：</label>
+                       <div class="input-group">
+                           <div class="input-group-addon" id="exercise-frequency">
+                               运动频率
+                           </div>
+                           <select class="form-control">
+                               <option>每天</option>
+                               <option>2-3次/周</option>
+                               <option>偶尔运动</option>
+                               <option>不运动</option>
+                           </select>
+                       </div>
+                       <span>运动方式：</span>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-1" value="option1">走路
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-2" value="option1">跑步
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-3" value="option1">爬山
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-4" value="option1">游泳
+                       </label>
+
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-5" value="option1">球类
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-6" value="option1">高尔夫
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-7" value="option1">网球
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-8" value="option1">乒乓球
+                       </label>
+                       <label class="radio-inline">
+                           <input type="checkbox" name="sport" id="sport-9" value="option1">羽毛球
+                       </label>
+
+                   </div>
+
+                   <div class="form-group">
+                       <label>睡眠质量：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="sport" id="sleep-quality-1" value="option1">正常
+                       </label>
+                       <div class="input-group">
+                           <div class="input-group-addon" id="sleep-quality-2">
+                               <input type="radio" name="sport" id="sleep-quality-3" value="option1">入睡困难
+                           </div>
+                           <select class="form-control">
+                               <option>偶尔</option>
+                               <option>经常</option>
+
+                           </select>
+                       </div>
+                       <div class="input-group">
+                           <div class="input-group-addon" id="sleep-quality-4">
+                               <input type="checkbox" name="sport" id="sleep-quality-5" value="option1">服用安眠药
+                           </div>
+                           <select class="form-control">
+                               <option>偶尔</option>
+                               <option>经常</option>
+
+                           </select>
+                       </div>
+                   </div>
+
+                   <div class="form-group">
+                       <label>精神状况：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="spirit-status" id="spirit-status-1" value="option1">精力充沛
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="spirit-status" id="spirit-status-2" value="option1">精力不足
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="spirit-status" id="spirit-status-3" value="option1">精神萎靡
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="spirit-status" id=spirit-status-4" value="option1">疲乏无力
+                       </label>
+                   </div>
+
+                   <div class="form-group">
+                       <label>健康检查：</label>
+                       <label class="radio-inline">
+                           <input type="radio" name="health-check" id="health-check" value="option1">每年
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="health-check" id="health-check-2" value="option1">每两年
+                       </label>
+                       <label class="radio-inline">
+                           <input type="radio" name="health-check" id="health-check-3" value="option1">不定期
+                       </label>
+
+                   </div>
+                </div>
+                   <div class="basic03"><button type="submit" class="btn btn-default clear">提交</button></div>
+               </form>
+
+           </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>玖玖国际</title>
+    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $('.nav li a').bind('click', function(){
+                $('.nav li a').removeClass('nav-active');
+                $(this).addClass('nav-active');
+            });
+
+        });
+        $(function () {
+//            if(document.body.offsetWidth <= 768){
+//                $(".navbar-collapse ul").removeClass("navbar-n")
+//            }else{
+//                $(".navbar-collapse ul").addClass("navbar-n")
+//            }
+
+            if(document.body.offsetWidth <= 768){
+                $(".navbar-collapse ul").toggleClass("navbar-n")
+            }
+        })
+
+
+    </script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle navbar-bg" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="70px"/></a>
+        </div>
+        <div class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav navbar-right navbar-n">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">基本情况</a></li>
+                <li><a href="#">档案维护</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">档案查询</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="banner">
+    <div class="container">
+        <div class="row">
+            <a href="#">
+                <div class="col-lg-4 col-md-4 col-sm-4 ban-con ban-bg ">
+                    <img class="box-hover" src="img/situation.png" alt=""/>
+                    <!--<p class="ban-p">基本情况</p>-->
+                </div>
+            </a>
+            <a href="#">
+                <div class="col-lg-4 col-md-4 col-sm-4 ban-con ban-bg-1 ">
+                    <img class="box-hover" src="img/maintain.png" alt=""/>
+                    <!--<p class="ban-p">档案维护</p>-->
+                </div>
+            </a>
+            <a href="#">
+                <div class="col-lg-4 col-md-4 col-sm-4 ban-con ban-bg ">
+                    <img class="box-hover" src="img/query.png" alt=""/>
+                    <!--<p class="ban-p">档案查询</p>-->
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="con">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 index-consult">
+                <img src="img/consult.png" alt="">
+                <a class="consult-btn" href="#" style="width: 180px">马上咨询</a>
+            </div>
+            <button class="btn btn-default index-consult-btn" type="submit" style="margin-left: 6px;">马上咨询</button>
+            <div class="col-lg-3 col-md-3 col-sm-3 con-img">
+                <img src="img/con-img.png" alt=""/>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="con-r">
+                    <p class="con-r-head">阳光e家 免费进社区</p>
+                    <p class="con-r-title">
+                        阳光e家免费进社区啦！<br>
+                        为您提供全面的健康咨询</p>
+                    <p class="con-r-c">入住条件：小区30位有效申请<br>
+                        申请日期：即日起-2015.12.31<br>
+                        服务地区：广州地区所有小区
+                    </p>
+
+                    <a class="con-apply" href="#" data-toggle="modal" data-target="#myModal02">马上申请</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: 1px solid #fff">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!--<h4 class="modal-title" id="myModalLabel">登陆</h4>-->
+                <img class="log-bg" src="img/mo-bg.png" alt="" width="300px"/>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">用户名</label>
+                        <input type="number" class="form-control" id="exampleInputNumber" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">密码</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                    </div>
+
+                    <label>
+                        <input type="checkbox"> 下次自动登陆
+                    </label>
+
+
+                    <label>
+                        <input type="checkbox"> 没有注册
+                    </label>
+                    <a href="#" class="f-password">忘记密码</a>
+                    <button type="submit" class="btn btn-default modal-sub">登陆</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade " id="myModal02" tabindex="-1" role="dialog02" aria-labelledby="myModalLabel02">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="border-bottom: none">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-body-con">
+                    <p class="log-success-p">登陆成功</p>
+                    <p>您的基本资料尚不清楚</p>
+                    <a href="#" class="modal-btn">马上去完善</a>
+                    <a href="#" class="modal-btn">直接跳过</a>
+                    <img src="img/mo-bg.png" alt="" class="modal-bg"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="footer">
+
+</div>
+
+</body>
+</html>
