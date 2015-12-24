@@ -6,9 +6,15 @@
     <title>玖玖国际</title>
     <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="css/bootstrap-combined.min.css">-->
+    <!--<link rel="stylesheet" href="css/bootstrap-datetimepicker.css">-->
     <link rel="stylesheet" href="css/style.css"/>
+
+
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"  charset="utf-8"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
     <script>
         $(document).ready(function(){
 
@@ -18,7 +24,50 @@
             });
         });
 
+        $(document).ready(function(){
+
+            $('.nav li a').bind('click', function(){
+                $('.nav li a').removeClass('nav-active');
+                $(this).addClass('nav-active');
+            });
+
+        });
+
+        $(function () {
+
+            if(document.body.offsetWidth <= 768){
+                $(".navbar-collapse ul").toggleClass("navbar-n")
+            }
+        })
+        //取消单选框的选定
+
+        function onClickRadioStyle(obj){
+            var group = $(obj).attr('name');//获取当前点击对象的name，作为组的名称
+            if($(obj).attr('flag')==1){//flag为1表示当前选中
+                $(obj).attr('flag',0);
+                $(obj).removeAttr("checked");
+            }else if($(obj).attr('flag')==0){   //flag为0表示当前未选中
+                $(obj).attr('flag',1);
+                $(obj).attr("checked","checked");
+            }
+
+            //将其它未选中的flag置为0
+            $("input[name='"+group+"']").not("input[name='"+group+"']:checked").each(function(){
+                $(this).attr('flag',0);
+
+            });
+        }
+
+        $(document).ready(function(){
+            $("input:radio").click(function(){
+                onClickRadioStyle(this);
+            })
+
+        })
+
     </script>
+
+
 </head>
 <body>
 <div class="navbar navbar-default navbar-fixed-top">
@@ -29,10 +78,10 @@
         </div>
         <div class="navbar-collapse collapse">
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">基本情况</a></li>
-                <li><a href="#">档案维护</a></li>
+            <ul class="nav navbar-nav navbar-right navbar-n">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="file.html" class="nav-active">基本情况</a></li>
+                <li><a href="situation.html">档案维护</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">档案查询</a></li>
 
             </ul>
@@ -89,7 +138,13 @@
 
                        <div class="form-group">
                            <label for="birthday" class="col-sm-4 control-label">出生日期：</label>
-                           <div class="col-sm-8"><input type="text" class="form-control" id="birthday" placeholder="1990-01-01"></div>
+                           <div class="col-sm-8" >
+                               <input id="birthday" class="form-control dateTime" type="text" name="birthday" value="" data-date-format="yyyy-mm-dd"/>
+                               <!--<div class="input-append date" id="birthday" data-date-format="yyyy-mm-dd">-->
+                                   <!--<input class="span2" size="16" type="text" value="">-->
+                                   <!--<span class="add-on"><i class="icon-th"></i></span>-->
+                               <!--</div>-->
+                           </div>
                        </div>
                        <div class="form-group">
                            <label for="identity" class="col-sm-4 control-label">身份证号：</label>
@@ -161,7 +216,7 @@
                            <div class="col-sm-8">
                                <div class="input-group">
                                    <input type="text" class="form-control" id="weight" placeholder="">
-                                   <div class="input-group-addon">kg</div>
+                                   <div class="input-group-addon">&nbsp;kg</div>
                                </div>
                            </div>
                        </div>
@@ -393,7 +448,7 @@
                        <div class="input-group">
                            <div class="input-group-addon">
                                <label class="radio-inline">
-                                   <input type="checkbox" name="anamnesis-else" id="tumour" value="option2"> 肿瘤
+                                   <input type="checkbox" name="anamnesis-else" id="tumour" value="option2"> 肿瘤&nbsp;&nbsp;&nbsp;
                                </label>
                            </div>
                            <select class="form-control">
@@ -404,7 +459,7 @@
                        <div class="input-group">
                            <div class="input-group-addon">
                                <label class="radio-inline">
-                                   <input type="checkbox" name="anamnesis-else" id="anamnesis-else" value="option2"> 其他
+                                   <input type="checkbox" name="anamnesis-else" id="anamnesis-else" value="option2"> 其他&nbsp;&nbsp;&nbsp;
                                </label>
                            </div>
                            <input type="text" class="form-control " id="anamnesis-else-t" placeholder="">
@@ -487,7 +542,7 @@
                        <div class="input-group">
                            <div class="input-group-addon">
                                <label class="radio-inline">
-                                   <input type="checkbox" name="family-history" id="family-history-3" value="option2"> 肿瘤
+                                   <input type="checkbox" name="family-history" id="family-history-3" value="option2"> 肿瘤&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                </label>
                            </div>
                            <input type="text" class="form-control " id="family-history-t1" placeholder="疾病名称">
@@ -503,7 +558,7 @@
                        <div class="input-group">
                            <div class="input-group-addon">
                                <label class="radio-inline">
-                                   <input type="checkbox" name="family-history" id="family-history-5" value="option2"> 其他
+                                   <input type="checkbox" name="family-history" id="family-history-5" value="option2"> 其他&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                </label>
                            </div>
                            <input type="text" class="form-control " id="family-history-t3" placeholder="疾病名称">
@@ -643,7 +698,7 @@
                        </label>
                        <div class="input-group">
                            <div class="input-group-addon" id="sleep-quality-2">
-                               <input type="radio" name="sport" id="sleep-quality-3" value="option1">入睡困难
+                               <input type="radio" name="sport" id="sleep-quality-3" value="option1">入睡困难&nbsp;&nbsp;&nbsp;
                            </div>
                            <select class="form-control">
                                <option>偶尔</option>
@@ -693,7 +748,93 @@
 
                    </div>
                 </div>
-                   <div class="basic03"><button type="submit" class="btn btn-default clear">提交</button></div>
+                   <div class="form-group basic03">
+                       <label>住院情况</label>
+                       <table class="table table-hover">
+                           <thead>
+                           <tr>
+                               <th class="text-info">入/出院日期</th>
+                               <th class="text-info">病因</th>
+                               <th class="text-info">治疗机构名称</th>
+                               <th class="text-info">病案号</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                               <td>2015-1-14/2015-1-20</td>
+                               <td>心脏病</td>
+                               <td>中山大学第一附属医院</td>
+                               <td>25150213</td>
+                           </tr>
+                           <tr>
+                               <td>2015-3-14/2015-3-20</td>
+                               <td>心脏病</td>
+                               <td>中山大学第一附属医院</td>
+                               <td>25152134</td>
+                           </tr>
+
+                           </tbody>
+                       </table>
+                   </div>
+                   <div class="form-group basic03">
+                       <label>家庭病床</label>
+                       <table class="table table-hover">
+                           <thead>
+                           <tr>
+                               <th class="text-info">建/撤床日期</th>
+                               <th class="text-info">原因</th>
+                               <th class="text-info">医疗机构名称</th>
+                               <th class="text-info">病案号</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                               <td>2015-1-14/2015-1-20</td>
+                               <td>心脏病</td>
+                               <td>中山大学第一附属医院</td>
+                               <td>25150213</td>
+                           </tr>
+                           <tr>
+                               <td>2015-3-14/2015-3-20</td>
+                               <td>心脏病</td>
+                               <td>中山大学第一附属医院</td>
+                               <td>25152134</a></td>
+                           </tr>
+
+                           </tbody>
+                       </table>
+                   </div>
+                   <div class="form-group basic03">
+                       <label>主要用药情况</label>
+                       <table class="table table-hover">
+                           <thead>
+                           <tr>
+                               <th class="text-info">药品名称</th>
+                               <th class="text-info">用法</th>
+                               <th class="text-info">用量</th>
+                               <th class="text-info">用药依从性</th>
+                           </tr>
+                           </thead>
+                           <tbody>
+                           <tr>
+                               <td>维生素C</td>
+                               <td>口服</td>
+                               <td>1片/次，一日3次</td>
+                               <td>规律</td>
+                           </tr>
+                           <tr>
+                               <td>维生素E</td>
+                               <td>口服</td>
+                               <td>1片/次，一日3次</td>
+                               <td>不规律</td>
+                           </tr>
+
+                           </tbody>
+                       </table>
+                   </div>
+
+
+                   <div class="basic04"><button type="submit" class="btn btn-default clear">提交</button></div>
                </form>
 
            </div>
@@ -703,8 +844,44 @@
 
 
 <div class="footer">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p> Copyright©2015<br>
+                    JOJO International All rights reserved<br>
+                    粤ICP备00002028号</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p>
+                    地址：广州市天河区林和西路888号1号楼801-808<br>
+                    电话：020-88888888<br>
+                    邮箱：service@99gj.com<br>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footer-right">
+                <img src="img/wx1.png" alt="微信"/>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!--<script type="text/javascript">-->
+    <!--$('#birthday').datetimepicker({-->
+        <!--format: 'yyyy-mm-dd',-->
+        <!--language: 'zh-CN',-->
+        <!--pickDate: true,-->
+        <!--weekStart: 1,-->
+        <!--autoclose: 1,-->
+        <!--todayHighlight: 1,-->
+        <!--startView: 2,-->
+        <!--minView: 2,-->
+        <!--forceParse: 0,-->
+        <!--showButtonPanel:true,-->
+        <!--inputMask: true,-->
+    <!--});-->
+
+<!--</script>-->
 
 </body>
 </html>

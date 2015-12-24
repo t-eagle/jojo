@@ -38,14 +38,15 @@
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle navbar-bg" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" height="70px"/></a>
+            <button type="button" class="navbar-toggle navbar-bg" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" height="70px"/></a>
         </div>
         <div class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav navbar-right navbar-n">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">基本情况</a></li>
-                <li><a href="#">档案维护</a></li>
+                <li><a href="#" class="nav-active">首页</a></li>
+                <li><a href="file.html">基本情况</a></li>
+                <li><a href="situation.html">档案维护</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">档案查询</a></li>
 
             </ul>
@@ -57,7 +58,7 @@
 <div class="banner">
     <div class="container">
         <div class="row">
-            <a href="#">
+            <a href="file.html">
                 <div class="col-lg-4 col-md-4 col-sm-4 ban-con ban-bg ">
                     <img class="box-hover" src="img/situation.png" alt=""/>
                     <!--<p class="ban-p">基本情况</p>-->
@@ -88,7 +89,7 @@
                 <img src="img/consult.png" alt="">
                 <a class="consult-btn" href="#" style="width: 180px">马上咨询</a>
             </div>
-            <button class="btn btn-default index-consult-btn" type="submit" style="margin-left: 6px;">马上咨询</button>
+            <button class="btn btn-default index-consult-btn" type="submit" style="margin-left: 6px;background-color: #f0ad4e; border-color: #eea236;">马上咨询</button>
             <div class="col-lg-3 col-md-3 col-sm-3 con-img">
                 <img src="img/con-img.png" alt=""/>
             </div>
@@ -103,7 +104,7 @@
                         服务地区：广州地区所有小区
                     </p>
 
-                    <a class="con-apply" href="#" data-toggle="modal" data-target="#myModal02">马上申请</a>
+                    <a class="con-apply" href="#"  data-toggle="modal" data-target="#myModal02">马上申请</a>
                 </div>
 
             </div>
@@ -124,12 +125,12 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">用户名</label>
-                        <input type="number" class="form-control" id="exampleInputNumber" placeholder="用户名">
+                        <label for="exampleInputNumber">用户名</label>
+                        <input type="text" class="form-control" id="exampleInputNumber" placeholder="用户名">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">密码</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码" style="margin-bottom: 10px">
                     </div>
 
                     <label>
@@ -141,7 +142,7 @@
                         <input type="checkbox"> 没有注册
                     </label>
                     <a href="#" class="f-password">忘记密码</a>
-                    <button type="submit" class="btn btn-default modal-sub">登陆</button>
+                    <button type="submit" class="btn btn-default modal-sub" data-toggle="modal" data-target="#myModal02">登陆</button>
                 </form>
             </div>
 
@@ -175,7 +176,25 @@
 
 
 <div class="footer">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p> Copyright©2015<br>
+                    JOJO International All rights reserved<br>
+                    粤ICP备00002028号</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p>
+                    地址：广州市天河区林和西路888号1号楼801-808<br>
+                    电话：020-88888888<br>
+                    邮箱：service@99gj.com<br>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footer-right">
+                <img src="img/wx1.png" alt="微信"/>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

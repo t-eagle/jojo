@@ -17,6 +17,20 @@
                 $(this).addClass('active01');
             });
         });
+        $(document).ready(function(){
+
+            $('.nav li a').bind('click', function(){
+                $('.nav li a').removeClass('nav-active');
+                $(this).addClass('nav-active');
+            });
+
+        });
+        $(function () {
+
+            if(document.body.offsetWidth <= 768){
+                $(".navbar-collapse ul").toggleClass("navbar-n")
+            }
+        })
 
     </script>
 </head>
@@ -29,10 +43,10 @@
         </div>
         <div class="navbar-collapse collapse">
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">首页</a></li>
-                <li><a href="#">基本情况</a></li>
-                <li><a href="#">档案维护</a></li>
+            <ul class="nav navbar-nav navbar-right navbar-n">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="file.html">基本情况</a></li>
+                <li><a href="#" class="nav-active">档案维护</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">档案查询</a></li>
 
             </ul>
@@ -113,7 +127,25 @@
 
 
 <div class="footer">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p> Copyright©2015<br>
+                    JOJO International All rights reserved<br>
+                    粤ICP备00002028号</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <p>
+                    地址：广州市天河区林和西路888号1号楼801-808<br>
+                    电话：020-88888888<br>
+                    邮箱：service@99gj.com<br>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 footer-right">
+                <img src="img/wx1.png" alt="微信"/>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>
